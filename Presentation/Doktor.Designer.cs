@@ -36,10 +36,10 @@ namespace Presentation
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -116,6 +116,16 @@ namespace Presentation
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Doktor Bilgileri";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(543, 56);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(199, 50);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Tüm Randevuları Görüntüle";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -149,16 +159,6 @@ namespace Presentation
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(748, 530);
             this.panel1.TabIndex = 9;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(555, 71);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(193, 41);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Tüm Randevuları Görüntüle";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Doktor
             // 
