@@ -80,6 +80,8 @@ namespace Presentation
             // 
             // Giris1
             // 
+            //this.panel1 = new System.Windows.Forms.Panel();
+
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(363, 248);
@@ -90,7 +92,6 @@ namespace Presentation
             this.Controls.Add(this.label1);
             this.Name = "Giris1";
             this.Text = "Giris1";
-            this.Load += new System.EventHandler(this.Giris1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

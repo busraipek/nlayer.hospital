@@ -25,7 +25,7 @@ namespace hastane
             {
                 form.BackColor = System.Drawing.Color.Blue;
             }
-            Application.Run(new Presentation.Giris1());
+            Application.Run(new Presentation.Doktor("1"));
         }
     }
 }

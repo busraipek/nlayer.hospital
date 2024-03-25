@@ -12,8 +12,8 @@ namespace Presentation
 {
     public partial class Giris1 : Form
     {
-        public string ad = "ad";
-        public string kimlikno = "kimlik";
+        private string ad = "ad";
+        private string kimlikno = "kimlik";
         private Business.Giris giris = new Business.Giris();
 
         public Giris1()
@@ -21,7 +21,7 @@ namespace Presentation
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
 
             if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text))
@@ -37,8 +37,8 @@ namespace Presentation
 
                 if (sayı == 1)
                 {
-                    Doktor gorusme = new Doktor();
-                    gorusme.Show();
+                    Doktor doktor = new Doktor(kimlikno);
+                    doktor.Show();
                 }
                 else if (sayı == 2)
                 {
@@ -55,10 +55,6 @@ namespace Presentation
 
         }
 
-        private void Giris1_Load(object sender, EventArgs e)
-        {
-            BackColor = Color.DarkTurquoise;
 
-        }
     }
 }

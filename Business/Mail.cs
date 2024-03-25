@@ -16,10 +16,11 @@ namespace Business
         private DataAccess.Posta posta = new DataAccess.Posta();
 
         public void SendMail(List<string> list,string kimlik, string baslik, string konu)
-        {
-            
+        {   
             OleDbConnection connection = baglanti.BaglantiAc();
-            connection.Open();
+
+            try 
+            { 
 
             string query = "SELECT mail FROM Hasta where kimlikno = @kimlik ";
             using (OleDbCommand command = new OleDbCommand(query, connection))
@@ -52,6 +53,15 @@ namespace Business
             {
                 MailMessage message = new MailMessage(posta.senderEmail, mil, baslik, konu);
                 smtp.Send(message);
+            }
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+            connection.Close();            
             }
 
         }

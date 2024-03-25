@@ -19,9 +19,13 @@ namespace Presentation
     {
         private Business.Mail mail = new Business.Mail();
         private Business.Randevu randevu = new Business.Randevu();
-        public Gorusme1()
+        private Business.Sırala sırala = new Business.Sırala();
+        public string kim;
+        public Gorusme1(string kimlik,string brans)
         {
             InitializeComponent();
+            label7.Text = kimlik;
+            kim = brans;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -80,15 +84,37 @@ namespace Presentation
         private void button3_Click(object sender, EventArgs e)
         {
             List<string> liste = new List<string>();
-            mail.SendMail(liste, label10.Text,"tanı", "gorus");
-            //HATA
+            try
+            {
+             mail.SendMail(liste, label7.Text,"tanı", "gorus");
+                MessageBox.Show("Mail Gönderildi");
+            }
+            catch
+            {
+                MessageBox.Show("Hata");
+
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            randevu.RandevuKaydet(label10.Text, richTextBox1.Text, richTextBox2.Text, richTextBox3.Text, label13.Text);
-            //HATA
+            
+            randevu.RandevuKaydet(  label7.Text,richTextBox1.Text, richTextBox2.Text, richTextBox3.Text,kim);
         }
 
+        private void Gorusme1_Load(object sender, EventArgs e)
+        {
+            List<string> liste = new List<string>();
+
+            sırala.HastaSırala(label7.Text, liste);
+            label8.Text = liste[0];
+            label9.Text = liste[1];
+            label10.Text = liste[2];
+            label14.Text = liste[3];
+            label6.Text = liste[4];
+
+
+        }
     }
 }

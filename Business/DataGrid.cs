@@ -98,5 +98,30 @@ namespace Business
             }
             return dt;
         }
+        public DataTable filldatagridhastarandevu(string DoktorKimlik , DateTime Tarih)
+        {
+            DataTable dt = new DataTable();
+            using (OleDbConnection connection = baglanti.BaglantiAc())
+            {
+                try
+                {
+                    DateTime tarih = Tarih.Date;
+                    string query = "select HastaKimlik,Tarih,Saat from Randevu where DoktorKimlik = @Doktorkimlik and Tarih = @Tarih";
+                    OleDbCommand komut = new OleDbCommand(query, connection);
+                    using (OleDbDataAdapter da = new OleDbDataAdapter(komut))
+                    {
+                        komut.Parameters.AddWithValue("@DoktorKimlik", DoktorKimlik);
+                        komut.Parameters.AddWithValue("@Tarih", tarih);
+                        komut.ExecuteNonQuery();
+                        da.Fill(dt);
+                    }
+                }
+                catch (Exception ex)
+                {
+                   Console.WriteLine(ex.Message);
+                }
+            }
+            return dt;
+        }
     }
 }

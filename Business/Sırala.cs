@@ -46,7 +46,7 @@ namespace Business
             OleDbConnection connection = baglanti.BaglantiAc();
             try
             {
-            string query = "SELECT ad,soyad FROM Hasta WHERE kimlikno = @kimlikno";
+            string query = "SELECT ad,soyad,cinsiyet,dogum_tarihi,mail,telefon FROM Hasta WHERE kimlikno = @kimlikno";
             using (OleDbCommand command = new OleDbCommand(query, connection))
             {
                 command.Parameters.AddWithValue("@kimlikno", kimlik);
@@ -59,8 +59,17 @@ namespace Business
                         {
                             ad = (string)reader["ad"],
                             soyad = (string)reader["soyad"],
+                            cinsiyet = (string)reader["cinsiyet"],
+                            dogum_tarihi = (DateTime)reader["dogum_tarihi"],
+                            mail = (string)reader["mail"],
+                            telefon = (string)reader["telefon"],
                         };
                         liste.Add(li.ad.ToString() + " " + li.soyad.ToString()) ;
+                        liste.Add(li.cinsiyet) ;
+                        liste.Add(li.dogum_tarihi.ToShortDateString()) ;
+                        liste.Add(li.mail) ;                        
+                        liste.Add(li.telefon) ;
+
                         i = i + 1;
                     }
                 }
@@ -72,6 +81,39 @@ namespace Business
                 throw;
             }
 
+            connection.Close();
+        }
+        public void DoktorBilgileriSırala(string kimlik, List<string> list)
+        {
+            OleDbConnection connection = baglanti.BaglantiAc();
+
+            string query = "SELECT ad,soyad,dogum_tarihi,cinsiyet,brans FROM Doktor WHERE kimlikno = @kimlikno";
+            using (OleDbCommand command = new OleDbCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("@kimlikno", kimlik);
+                using (OleDbDataReader reader = command.ExecuteReader())
+                {
+                    int i = 0;
+                    while (reader.Read())
+                    {
+                        Doktor li = new Doktor()
+                        {
+                            ad = (string)reader["ad"],
+                            soyad = (string)reader["soyad"],
+                            cinsiyet = (string)reader["cinsiyet"],
+                            dogum_tarihi = (DateTime)reader["dogum_tarihi"],
+                            brans = (string)reader["brans"],
+                        };
+                        list.Add(li.ad + " " + li.soyad);
+                        list.Add(li.brans);
+                        list.Add(li.cinsiyet);
+                        list.Add(li.dogum_tarihi.ToShortDateString());
+
+                        i = i + 1;
+                    }
+                }
+                command.ExecuteNonQuery();
+            }
             connection.Close();
         }
     }
