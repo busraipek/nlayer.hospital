@@ -12,14 +12,14 @@ namespace Business
     {
         private DataAccess.Baglanti baglanti = new Baglanti();
 
-        public void DoktorEkle(string ad, string soyad, string cinsiyet, string kimlik, DateTime dogum, string e_posta, string brans, string telefon, string sifre)
+        public void DoktorEkle(string ad, string soyad, string cinsiyet, string kimlik, DateTime dogum,  string brans, string telefon, string sifre)
         {
 
             OleDbConnection connection = baglanti.BaglantiAc();
             try
             {
                 OleDbCommand komut = new OleDbCommand("insert into Doktor" +
-                "(ad,soyad,cinsiyet,kimlikno,dogum_tarihi,mail,telefon,brans,sifre) values (@ad, @soyad, @cinsiyet, @kimlikno, @dogum_tarihi, @mail, " +
+                "(ad,soyad,cinsiyet,kimlikno,dogum_tarihi,telefon,brans,sifre) values (@ad, @soyad, @cinsiyet, @kimlikno, @dogum_tarihi," +
                 "@telefon,@brans,@sifre)", connection);
 
                 komut.Parameters.AddWithValue("@ad", ad);
@@ -27,7 +27,6 @@ namespace Business
                 komut.Parameters.AddWithValue("@cinsiyet", cinsiyet);
                 komut.Parameters.AddWithValue("@kimlikno", kimlik);
                 komut.Parameters.AddWithValue("@dogum_tarihi", dogum);
-                komut.Parameters.AddWithValue("@mail", e_posta);
                 komut.Parameters.AddWithValue("@telefon", telefon);
                 komut.Parameters.AddWithValue("@brans", brans);
                 komut.Parameters.AddWithValue("@sifre", sifre);

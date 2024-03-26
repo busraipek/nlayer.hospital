@@ -36,6 +36,7 @@ namespace Presentation
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -101,6 +102,7 @@ namespace Presentation
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
@@ -115,6 +117,16 @@ namespace Presentation
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Doktor Bilgileri";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "dd.MM.yyyy";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(606, 78);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(124, 22);
+            this.dateTimePicker1.TabIndex = 9;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // button1
             // 
@@ -190,5 +202,6 @@ namespace Presentation
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

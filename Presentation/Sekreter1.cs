@@ -28,12 +28,11 @@ namespace Presentation
                 string kimlik = textBox3.Text;
                 DateTime dogum = dateTimePicker1.Value;
                 string brans = comboBox4.Text;
-                string e_posta = textBox16.Text;
                 string telefon = textBox4.Text;
                 string sifre = textBox5.Text;
                 try
                 {
-                    ekle.DoktorEkle(ad, soyad, cinsiyet, kimlik, dogum, e_posta, brans, telefon, sifre);
+                    ekle.DoktorEkle(ad, soyad, cinsiyet, kimlik, dogum, brans, telefon, sifre);
                     MessageBox.Show("Üye Kaydedildi");
 
                 }

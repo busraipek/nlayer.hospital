@@ -51,6 +51,7 @@ namespace Presentation
                     textBox1.Clear();
                     textBox2.Clear();
                 }
+                this.Hide();
             }
 
         }

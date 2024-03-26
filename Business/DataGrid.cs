@@ -77,15 +77,16 @@ namespace Business
             }
             return dt;
         }
-        public DataTable filldatagridhastagecmis()
+        public DataTable filldatagridhastagecmis(string kimlik)
         {
             DataTable dt = new DataTable();
             using (OleDbConnection connection = baglanti.BaglantiAc())
             {
                 try
                 {
-                    string query = "select * from HastaGecmisi";
+                    string query = "select * from HastaGecmisi where kimlikno=@kimlik";
                     OleDbCommand komut = new OleDbCommand(query, connection);
+                    komut.Parameters.AddWithValue("@kimlik", kimlik);
                     using (OleDbDataAdapter da = new OleDbDataAdapter(komut))
                     {
                         da.Fill(dt);

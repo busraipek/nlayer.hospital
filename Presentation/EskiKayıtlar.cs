@@ -13,15 +13,16 @@ namespace Presentation
     public partial class EskiKayıtlar : Form
     {
         private Business.DataGrid dataGrid = new Business.DataGrid();
-
-        public EskiKayıtlar()
+        private string kimlikno;
+        public EskiKayıtlar(string kimlik)
         {
             InitializeComponent();
+            kimlikno = kimlik;
         }
 
         private void EskiKayıtlar_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = dataGrid.filldatagridhastagecmis();
+            dataGridView1.DataSource = dataGrid.filldatagridhastagecmis(kimlikno);
         }
     }
 }

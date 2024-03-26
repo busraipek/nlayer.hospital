@@ -76,7 +76,7 @@ namespace Presentation
 
         private void button4_Click(object sender, EventArgs e)
         {
-            EskiKayıtlar doktor = new EskiKayıtlar();
+            EskiKayıtlar doktor = new EskiKayıtlar(label7.Text);
             doktor.StartPosition = FormStartPosition.CenterScreen;
             doktor.Show();
         }
@@ -86,8 +86,9 @@ namespace Presentation
             List<string> liste = new List<string>();
             try
             {
-             mail.SendMail(liste, label7.Text,"tanı", "gorus");
-                MessageBox.Show("Mail Gönderildi");
+                string gorus = ("Tanı : \n" + richTextBox1.Text + "\n\nGörüş: \n" + richTextBox2.Text + "\n\nTahlil: \n" + richTextBox3.Text);
+             mail.SendMail(liste, label7.Text,"X Devlet Hastanesi", gorus);
+                 MessageBox.Show("Mail Gönderildi");
             }
             catch
             {
@@ -101,6 +102,8 @@ namespace Presentation
         {
             
             randevu.RandevuKaydet(  label7.Text,richTextBox1.Text, richTextBox2.Text, richTextBox3.Text,kim);
+            MessageBox.Show("Görüşme Kaydedildi");
+
         }
 
         private void Gorusme1_Load(object sender, EventArgs e)

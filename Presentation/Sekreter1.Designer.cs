@@ -62,8 +62,6 @@ namespace Presentation
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -365,8 +363,6 @@ namespace Presentation
             this.groupBox1.Controls.Add(this.comboBox4);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.label20);
-            this.groupBox1.Controls.Add(this.label19);
-            this.groupBox1.Controls.Add(this.textBox16);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
@@ -432,22 +428,6 @@ namespace Presentation
             this.label20.Size = new System.Drawing.Size(93, 17);
             this.label20.TabIndex = 16;
             this.label20.Text = "Doğum Tarihi";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(11, 352);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(77, 17);
-            this.label19.TabIndex = 15;
-            this.label19.Text = "Mail Adresi";
-            // 
-            // textBox16
-            // 
-            this.textBox16.Location = new System.Drawing.Point(100, 349);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(128, 22);
-            this.textBox16.TabIndex = 14;
             // 
             // label17
             // 
@@ -681,8 +661,6 @@ namespace Presentation
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.Label label22;
