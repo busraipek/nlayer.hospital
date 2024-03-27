@@ -21,10 +21,10 @@ namespace Presentation
             InitializeComponent();
         }
 
-        public void button1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text))
+            if (string.IsNullOrWhiteSpace(textBox3.Text) || string.IsNullOrWhiteSpace(textBox4.Text))
             {
                 MessageBox.Show("Kullanıcı adı ve şifre gereklidir.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -33,7 +33,7 @@ namespace Presentation
             {
                 int sayı = 0;
 
-                giris.GirisYap(textBox1.Text, textBox2.Text,ref ad,ref kimlikno, ref sayı);
+                giris.GirisYap(textBox4.Text, textBox3.Text, ref ad, ref kimlikno, ref sayı);
 
                 if (sayı == 1)
                 {
@@ -53,9 +53,6 @@ namespace Presentation
                 }
                 this.Hide();
             }
-
         }
-
-
     }
 }

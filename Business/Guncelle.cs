@@ -12,7 +12,7 @@ namespace Business
     {
         private DataAccess.Baglanti baglanti = new Baglanti();
 
-        public void DoktorGuncelle(string eskikimlik,string kimlikno, string ad, string soyad, string cinsiyet,DateTime dogum_tarihi, string mail, string telefon, string brans, string sifre)
+        public void DoktorGuncelle(string eskikimlik,string kimlikno, string ad, string soyad, string cinsiyet,DateTime dogum_tarihi, string telefon, string brans, string sifre)
         {
 
             OleDbConnection connection = baglanti.BaglantiAc();
@@ -20,7 +20,7 @@ namespace Business
             {
                 OleDbCommand komut = new OleDbCommand("UPDATE Doktor SET " +
                     "ad = @ad, soyad = @soyad, cinsiyet = @cinsiyet, kimlikno = @kimlikno, " +
-                    "dogum_tarihi = @dogum_tarihi, mail = @mail, telefon = @telefon, brans = @brans, sifre = @sifre " +
+                    "dogum_tarihi = @dogum_tarihi, telefon = @telefon, brans = @brans, sifre = @sifre " +
                     "WHERE kimlikno = @eskikimlik", connection);
                
                 komut.Parameters.AddWithValue("@ad", ad);
@@ -28,7 +28,6 @@ namespace Business
                 komut.Parameters.AddWithValue("@cinsiyet", cinsiyet);               
                 komut.Parameters.AddWithValue("@kimlikno", kimlikno);
                 komut.Parameters.AddWithValue("@dogum_tarihi", dogum_tarihi);
-                komut.Parameters.AddWithValue("@mail", mail);
                 komut.Parameters.AddWithValue("@telefon", telefon);
                 komut.Parameters.AddWithValue("@brans", brans);
                 komut.Parameters.AddWithValue("@sifre", sifre);

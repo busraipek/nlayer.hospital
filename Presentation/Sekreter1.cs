@@ -1,10 +1,13 @@
-﻿using System;
+﻿using Business;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -100,10 +103,28 @@ namespace Presentation
             silme.StartPosition = FormStartPosition.CenterScreen;
             silme.Show();
         }
-
+        private void doktorHastaSayısıToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Bölüm_DoktorSayısı zed = new Bölüm_DoktorSayısı();
+            zed.StartPosition = FormStartPosition.Manual;
+            zed.TopLevel = false;
+            zed.FormBorderStyle = FormBorderStyle.None;
+            zed.ControlBox = false;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(zed);
+            zed.Show();
+        }
         private void Sekreter1_Load(object sender, EventArgs e)
         {
             comboBox1.Text = comboBox1.Items[0].ToString();
+            Bölüm_HastaSayısı hasta = new Bölüm_HastaSayısı();
+            hasta.StartPosition = FormStartPosition.Manual;
+            hasta.TopLevel = false;
+            hasta.FormBorderStyle = FormBorderStyle.None;
+            hasta.ControlBox = false;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(hasta);
+            hasta.Show();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -135,6 +156,24 @@ namespace Presentation
                 groupBox2.Visible = true;
                 groupBox3.Visible = false;
             }
+        }
+
+        private void bölümHastaSayısıToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Bölüm_HastaSayısı hasta = new Bölüm_HastaSayısı();
+            hasta.StartPosition = FormStartPosition.Manual;
+            hasta.TopLevel = false;
+            hasta.FormBorderStyle = FormBorderStyle.None;
+            hasta.ControlBox = false;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(hasta);
+            hasta.Show();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
