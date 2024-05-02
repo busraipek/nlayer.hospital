@@ -21,41 +21,84 @@ namespace Presentation
             InitializeComponent();
         }
 
-        public void button1_Click(object sender, EventArgs e)
+
+        private void button2_Click(object sender, EventArgs e)
         {
-
-            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text))
-            {
-                MessageBox.Show("Kullanıcı adı ve şifre gereklidir.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            else
-            {
-                int sayı = 0;
-
-                giris.GirisYap(textBox1.Text, textBox2.Text,ref ad,ref kimlikno, ref sayı);
-
-                if (sayı == 1)
+                if (string.IsNullOrWhiteSpace(textBox3.Text) || string.IsNullOrWhiteSpace(textBox4.Text))
                 {
-                    Doktor doktor = new Doktor(kimlikno);
-                    doktor.Show();
-                }
-                else if (sayı == 2)
-                {
-                    Sekreter1 sekreter = new Sekreter1();
-                    sekreter.Show();
+                    MessageBox.Show("Kullanıcı adı ve şifre gereklidir.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
                 }
                 else
                 {
-                    MessageBox.Show("Hatalı kimlik numarası veya şifre. Tekrar deneyin");
-                    textBox1.Clear();
-                    textBox2.Clear();
-                }
-                this.Hide();
+                    int sayı = 0;
+
+                    giris.GirisYap(textBox3.Text, textBox4.Text, ref ad, ref kimlikno, ref sayı);
+
+                    if (sayı == 1)
+                    {
+                        while (progressBar2.Value < 100)
+                        {
+
+                            progressBar2.Value = +progressBar1.Value + 100;
+
+                        }
+                        if (progressBar2.Value == 100)
+                        {
+                            MessageBox.Show("Giriş Yapılıyor");
+                            progressBar2.Value = 0;
+                        }
+                            Doktor doktor = new Doktor(kimlikno);
+                            doktor.Show();
+                    }
+                    else if (sayı == 2)
+                    {
+                        while (progressBar2.Value < 100)
+                        {
+
+                            progressBar2.Value = +progressBar1.Value + 100;
+
+                        }
+                        if (progressBar2.Value == 100)
+                        {
+                            MessageBox.Show("Yanlış Giriş Yaptınız Tekrar Deneyin");
+                            progressBar2.Value = 0;
+                        }
+                    
+                        return;
+                    }
+                    else
+                    {
+                        while (progressBar2.Value < 100)
+                        {
+
+                            progressBar2.Value = +progressBar1.Value + 100;
+
+                        }
+                        if (progressBar2.Value == 100)
+                        {
+                            MessageBox.Show("Hatalı Kimlik Numarası Girdiniz");
+                            progressBar2.Value = 0;
+                        }
+                        textBox1.Clear();
+                            textBox2.Clear();
+                            return;
+                    }
+                this.Close();
+            } 
+
             }
+
+        private void Giris1_Load(object sender, EventArgs e)
+        {
 
         }
 
-
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AnaGiriş anagiris = new AnaGiriş();
+            anagiris.Show();
+            this.Close();
+        }
     }
-}
+    }

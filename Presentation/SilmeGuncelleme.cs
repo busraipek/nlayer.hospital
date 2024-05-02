@@ -98,11 +98,10 @@ namespace Presentation
                 string soyad = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
                 string cinsiyet = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
                 DateTime dogum_tarihi = DateTime.Parse(dataGridView1.SelectedRows[0].Cells[4].Value.ToString());
-                string mail = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
-                string telefon = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
-                string brans = dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
-                string sifre = dataGridView1.SelectedRows[0].Cells[8].Value.ToString();
-                guncel.DoktorGuncelle(eskikimlik,kimlikno,ad,soyad,cinsiyet,dogum_tarihi,mail,telefon,brans,sifre);
+                string telefon = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
+                string brans = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
+                string sifre = dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
+                guncel.DoktorGuncelle(eskikimlik,kimlikno,ad,soyad,cinsiyet,dogum_tarihi,telefon,brans,sifre);
                 MessageBox.Show("Başarıyla Güncellendi");
             }
             else if (menuno == 1)

@@ -36,41 +36,41 @@
     <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
-    <Reference Include="itext.barcodes, Version=8.0.3.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
-      <HintPath>packages\itext.8.0.3\lib\net461\itext.barcodes.dll</HintPath>
+    <Reference Include="itext.barcodes, Version=8.0.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itext.8.0.4\lib\net461\itext.barcodes.dll</HintPath>
     </Reference>
-    <Reference Include="itext.bouncy-castle-connector, Version=8.0.3.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
-      <HintPath>packages\itext.8.0.3\lib\net461\itext.bouncy-castle-connector.dll</HintPath>
+    <Reference Include="itext.bouncy-castle-connector, Version=8.0.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itext.8.0.4\lib\net461\itext.bouncy-castle-connector.dll</HintPath>
     </Reference>
-    <Reference Include="itext.commons, Version=8.0.3.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
-      <HintPath>packages\itext.commons.8.0.3\lib\net461\itext.commons.dll</HintPath>
+    <Reference Include="itext.commons, Version=8.0.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itext.commons.8.0.4\lib\net461\itext.commons.dll</HintPath>
     </Reference>
-    <Reference Include="itext.forms, Version=8.0.3.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
-      <HintPath>packages\itext.8.0.3\lib\net461\itext.forms.dll</HintPath>
+    <Reference Include="itext.forms, Version=8.0.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itext.8.0.4\lib\net461\itext.forms.dll</HintPath>
     </Reference>
-    <Reference Include="itext.io, Version=8.0.3.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
-      <HintPath>packages\itext.8.0.3\lib\net461\itext.io.dll</HintPath>
+    <Reference Include="itext.io, Version=8.0.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itext.8.0.4\lib\net461\itext.io.dll</HintPath>
     </Reference>
-    <Reference Include="itext.kernel, Version=8.0.3.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
-      <HintPath>packages\itext.8.0.3\lib\net461\itext.kernel.dll</HintPath>
+    <Reference Include="itext.kernel, Version=8.0.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itext.8.0.4\lib\net461\itext.kernel.dll</HintPath>
     </Reference>
-    <Reference Include="itext.layout, Version=8.0.3.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
-      <HintPath>packages\itext.8.0.3\lib\net461\itext.layout.dll</HintPath>
+    <Reference Include="itext.layout, Version=8.0.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itext.8.0.4\lib\net461\itext.layout.dll</HintPath>
     </Reference>
-    <Reference Include="itext.pdfa, Version=8.0.3.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
-      <HintPath>packages\itext.8.0.3\lib\net461\itext.pdfa.dll</HintPath>
+    <Reference Include="itext.pdfa, Version=8.0.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itext.8.0.4\lib\net461\itext.pdfa.dll</HintPath>
     </Reference>
-    <Reference Include="itext.pdfua, Version=8.0.3.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
-      <HintPath>packages\itext.8.0.3\lib\net461\itext.pdfua.dll</HintPath>
+    <Reference Include="itext.pdfua, Version=8.0.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itext.8.0.4\lib\net461\itext.pdfua.dll</HintPath>
     </Reference>
-    <Reference Include="itext.sign, Version=8.0.3.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
-      <HintPath>packages\itext.8.0.3\lib\net461\itext.sign.dll</HintPath>
+    <Reference Include="itext.sign, Version=8.0.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itext.8.0.4\lib\net461\itext.sign.dll</HintPath>
     </Reference>
-    <Reference Include="itext.styledxmlparser, Version=8.0.3.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
-      <HintPath>packages\itext.8.0.3\lib\net461\itext.styledxmlparser.dll</HintPath>
+    <Reference Include="itext.styledxmlparser, Version=8.0.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itext.8.0.4\lib\net461\itext.styledxmlparser.dll</HintPath>
     </Reference>
-    <Reference Include="itext.svg, Version=8.0.3.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
-      <HintPath>packages\itext.8.0.3\lib\net461\itext.svg.dll</HintPath>
+    <Reference Include="itext.svg, Version=8.0.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itext.8.0.4\lib\net461\itext.svg.dll</HintPath>
     </Reference>
     <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <HintPath>packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
@@ -107,6 +107,7 @@
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Diagnostics.DiagnosticSource.5.0.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
+    <Reference Include="System.Diagnostics.Tracing" />
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
     </Reference>
@@ -132,8 +133,29 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph, Version=5.1.7.430, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <HintPath>packages\ZedGraph.5.1.7\lib\net35-Client\ZedGraph.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnaGiriş.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnaGiriş.Designer.cs">
+      <DependentUpon>AnaGiriş.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bölüm_DoktorSayısı.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bölüm_DoktorSayısı.Designer.cs">
+      <DependentUpon>Bölüm_DoktorSayısı.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bölüm_HastaSayısı.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bölüm_HastaSayısı.Designer.cs">
+      <DependentUpon>Bölüm_HastaSayısı.cs</DependentUpon>
+    </Compile>
     <Compile Include="Doktor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +173,12 @@
     </Compile>
     <Compile Include="Giris1.Designer.cs">
       <DependentUpon>Giris1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Giris2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giris2.Designer.cs">
+      <DependentUpon>Giris2.cs</DependentUpon>
     </Compile>
     <Compile Include="Gorusme1.cs">
       <SubType>Form</SubType>
@@ -178,6 +206,15 @@
     <Compile Include="SilmeGuncelleme.Designer.cs">
       <DependentUpon>SilmeGuncelleme.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AnaGiriş.resx">
+      <DependentUpon>AnaGiriş.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bölüm_DoktorSayısı.resx">
+      <DependentUpon>Bölüm_DoktorSayısı.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bölüm_HastaSayısı.resx">
+      <DependentUpon>Bölüm_HastaSayısı.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Doktor.resx">
       <DependentUpon>Doktor.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Giris1.resx">
       <DependentUpon>Giris1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Giris2.resx">
+      <DependentUpon>Giris2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gorusme1.resx">
       <DependentUpon>Gorusme1.cs</DependentUpon>
@@ -227,6 +267,16 @@
       <Project>{320a65d4-b6de-4629-ad4d-ca4904c96999}</Project>
       <Name>Business</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{ea0fedf0-35fe-4a6b-a106-d231494fa851}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="License-LGPL.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

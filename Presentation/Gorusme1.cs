@@ -1,4 +1,6 @@
-﻿using System;
+﻿using iText.Kernel.Geom;
+using iText.StyledXmlParser.Jsoup.Nodes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,10 +10,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using iText;
-//using iText.IO;
-//using iTextSharp.text;
-//using iTextSharp.text.pdf;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
+using iText.Kernel.Pdf;
+using iText.Layout;
+using iText.Layout.Element;
 
 namespace Presentation
 {
@@ -21,59 +24,182 @@ namespace Presentation
         private Business.Randevu randevu = new Business.Randevu();
         private Business.Sırala sırala = new Business.Sırala();
         public string kim;
-        public Gorusme1(string kimlik,string brans)
+
+        /*   public Gorusme1(string kimlik, string brans)
+          {
+              label7.Text = kimlik;
+              kim = brans;
+              InitializeComponent();
+          }*/
+        public Gorusme1(string kimlik, string brans)
         {
             InitializeComponent();
             label7.Text = kimlik;
             kim = brans;
         }
 
+
+
         private void button2_Click(object sender, EventArgs e)
         {
             try
             {
-                //PdfPTable pdfTablosu = new PdfPTable(dataGridView1.ColumnCount);
-                //pdfTablosu.DefaultCell.Padding = 3;
-                //pdfTablosu.WidthPercentage = 100;
-                //pdfTablosu.HorizontalAlignment = Element.ALIGN_LEFT;
-                //pdfTablosu.DefaultCell.BorderWidth = 1;
-                //foreach (DataGridViewColumn sutun in dataGridView1.Columns)
-                //{
-                //    PdfPCell pdfHucresi = new PdfPCell(new Phrase(sutun.HeaderText));
-                //    pdfTablosu.AddCell(pdfHucresi);
-                //}
-                //foreach (DataGridViewRow satir in dataGridView1.Rows)
-                //{
-                //    foreach (DataGridViewCell cell in satir.Cells)
-                //    {
-                //        pdfTablosu.AddCell(cell.Value.ToString());
-                //    }
-                //}
 
-                //SaveFileDialog pdfkaydetme = new SaveFileDialog();
-                //pdfkaydetme.Filter = "PDF Dosyaları|*.pdf";
-                //pdfkaydetme.Title = "PDF Olarak Kaydet";
-                //if (pdfkaydetme.ShowDialog() == DialogResult.OK)
-                //{
-                //    using (FileStream stream = new FileStream(pdfkaydetme.FileName, FileMode.Create))
-                //    {
-                //        iTextSharp.text.Document pdfDosya = new iTextSharp.text.Document(PageSize.A4, 5f, 5f, 11f, 10f);
-                //        iTextSharp.text.pdf.PdfWriter.GetInstance(pdfDosya, stream);
-                //        pdfDosya.Open();
-                //        pdfDosya.Add(pdfTablosu);
-                //        pdfDosya.Close();
-                //        stream.Close();
-                //        MessageBox.Show("PDF dosyası başarıyla oluşturuldu!\n" + "Dosya Konumu: " + pdfkaydetme.FileName, "İşlem Tamam");
-                //    }
-                //}
+                void KontrolBilgileriniEkle(Control control, PdfPTable pdfxTablosu)
+                {
+                    PdfPCell pdfHucresi = new PdfPCell();
+                    pdfHucresi.Border = PdfPCell.NO_BORDER;
+                    pdfHucresi.Padding = 5f;
+
+                    if (control is Label)
+                    {
+                        Label label = (Label)control;
+
+                        pdfHucresi.Phrase = new Phrase(
+                                                       $"Hasta Bilgisi: {label.Text}");
+                    }
+                    else if (control is TextBox)
+                    {
+                        TextBox textBox = (TextBox)control;
+
+                        pdfHucresi.Phrase = new Phrase(
+                                                       $"İçerik: {textBox.Text}");
+                    }
+                    else if (control is RichTextBox)
+                    {
+                        RichTextBox richTextBox = (RichTextBox)control;
+
+                        pdfHucresi.Phrase = new Phrase(
+                                                       $"{richTextBox.Text}");
+                    }
+
+                    pdfxTablosu.AddCell(pdfHucresi);
+                }
+
+                // PDF oluşturma işlemi
+                PdfPTable pdfTablosu = new PdfPTable(1); // Tek sütun olacak
+                pdfTablosu.DefaultCell.Padding = 3;
+                pdfTablosu.WidthPercentage = 100;
+                pdfTablosu.HorizontalAlignment = iTextSharp.text.Element.ALIGN_LEFT;
+
+                foreach (Control control in groupBox2.Controls)
+                {
+                    if (control is GroupBox)
+                    {
+                        GroupBox groupBox = (GroupBox)control;
+                        foreach (Control innerControl in groupBox.Controls)
+                        {
+                            KontrolBilgileriniEkle(innerControl, pdfTablosu);
+                        }
+                    }
+                    else
+                    {
+                        KontrolBilgileriniEkle(control, pdfTablosu);
+                    }
+                }
+
+                SaveFileDialog pdfkaydetme = new SaveFileDialog();
+                pdfkaydetme.Filter = "PDF Dosyaları|*.pdf";
+                pdfkaydetme.Title = "PDF Olarak Kaydet";
+                if (pdfkaydetme.ShowDialog() == DialogResult.OK)
+                {
+                    using (FileStream stream = new FileStream(pdfkaydetme.FileName, FileMode.Create))
+                    {
+                        iTextSharp.text.Document pdfDosya = new iTextSharp.text.Document(iTextSharp.text.PageSize.A4, 5f, 5f, 11f, 10f);
+                        iTextSharp.text.pdf.PdfWriter.GetInstance(pdfDosya, stream);
+                        pdfDosya.Open();
+                        pdfDosya.Add(pdfTablosu);
+                        pdfDosya.Close();
+                        stream.Close();
+                        MessageBox.Show("PDF dosyası başarıyla oluşturuldu!\n" + "Dosya Konumu: " + pdfkaydetme.FileName, "İşlem Tamam");
+                    }
+                }
+
             }
+            /*string richTextBoxText1 = groupBox2;
+
+
+            {
+
+                PdfPTable pdfTablosu = new PdfPTable(1);
+                pdfTablosu.DefaultCell.Padding = 3;
+                pdfTablosu.WidthPercentage = 100;
+                pdfTablosu.HorizontalAlignment = iTextSharp.text.Element.ALIGN_LEFT;
+
+
+                PdfPCell pdfHucresi = new PdfPCell(new Phrase(groupBox2));
+                pdfTablosu.AddCell(pdfHucresi);
+                SaveFileDialog pdfkaydetme = new SaveFileDialog();
+                pdfkaydetme.Filter = "PDF Dosyaları|*.pdf";
+                pdfkaydetme.Title = "PDF Olarak Kaydet";
+                if (pdfkaydetme.ShowDialog() == DialogResult.OK)
+                {
+                    using (FileStream stream = new FileStream(pdfkaydetme.FileName, FileMode.Create))
+                    {
+                        iTextSharp.text.Document pdfDosya = new iTextSharp.text.Document(iTextSharp.text.PageSize.A4, 5f, 5f, 11f, 10f);
+                        iTextSharp.text.pdf.PdfWriter.GetInstance(pdfDosya, stream);
+                        pdfDosya.Open();
+                        pdfDosya.Add(pdfTablosu);
+                        pdfDosya.Close();
+                        stream.Close();
+                        MessageBox.Show("PDF dosyası başarıyla oluşturuldu!\n" + "Dosya Konumu: " + pdfkaydetme.FileName, "İşlem Tamam");
+
+                        pdfDosya.Add(pdfTablosu);
+
+                        pdfDosya.Close();
+                        stream.Close();
+                        MessageBox.Show("PDF dosyası başarıyla oluşturuldu!\n" + "Dosya Konumu: output.pdf", "İşlem Tamam");
+                    }
+
+            */
 
             catch (Exception hata)
             {
                 MessageBox.Show(hata.Message);
             }
+
         }
 
+        private static void GroupBoxIcerigiEkle(GroupBox groupBox, PdfPTable pdfTablosu)
+        {
+            foreach (Control control in groupBox.Controls)
+            {
+                if (control is Label)
+                {
+                    Label label = (Label)control;
+
+                    PdfPCell pdfEtiketAdiHucresi = new PdfPCell(new Phrase("Etiket Adı: " + label.Name));
+                    pdfTablosu.AddCell(pdfEtiketAdiHucresi);
+
+                    PdfPCell pdfIcerikHucresi = new PdfPCell(new Phrase("İçerik: " + label.Text));
+                    pdfTablosu.AddCell(pdfIcerikHucresi);
+                }
+                else if (control is TextBox)
+                {
+                    TextBox textBox = (TextBox)control;
+
+                    PdfPCell pdfEtiketAdiHucresi = new PdfPCell(new Phrase("Etiket Adı: " + textBox.Name));
+                    pdfTablosu.AddCell(pdfEtiketAdiHucresi);
+
+                    PdfPCell pdfIcerikHucresi = new PdfPCell(new Phrase("İçerik: " + textBox.Text));
+                    pdfTablosu.AddCell(pdfIcerikHucresi);
+                }
+                else if (control is RichTextBox)
+                {
+                    RichTextBox richTextBox = (RichTextBox)control;
+
+                    PdfPCell pdfEtiketAdiHucresi = new PdfPCell(new Phrase("Etiket Adı: " + richTextBox.Name));
+                    pdfTablosu.AddCell(pdfEtiketAdiHucresi);
+
+                    PdfPCell pdfIcerikHucresi = new PdfPCell(new Phrase("İçerik: " + richTextBox.Text));
+                    pdfTablosu.AddCell(pdfIcerikHucresi);
+                }
+                else if (control is GroupBox)
+                {
+                    GroupBoxIcerigiEkle((GroupBox)control, pdfTablosu);
+                }
+            }
+        }
         private void button4_Click(object sender, EventArgs e)
         {
             EskiKayıtlar doktor = new EskiKayıtlar(label7.Text);

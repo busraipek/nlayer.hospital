@@ -60,6 +60,7 @@ namespace Presentation
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.Location = new System.Drawing.Point(489, 436);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(158, 41);
@@ -77,33 +78,37 @@ namespace Presentation
             this.sekreterToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(838, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(838, 30);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // doktorToolStripMenuItem
             // 
+            this.doktorToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.doktorToolStripMenuItem.Name = "doktorToolStripMenuItem";
-            this.doktorToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
+            this.doktorToolStripMenuItem.Size = new System.Drawing.Size(79, 26);
             this.doktorToolStripMenuItem.Text = "Doktor";
             this.doktorToolStripMenuItem.Click += new System.EventHandler(this.doktorToolStripMenuItem_Click);
             // 
             // hastaToolStripMenuItem
             // 
+            this.hastaToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.hastaToolStripMenuItem.Name = "hastaToolStripMenuItem";
-            this.hastaToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
+            this.hastaToolStripMenuItem.Size = new System.Drawing.Size(69, 26);
             this.hastaToolStripMenuItem.Text = "Hasta";
             this.hastaToolStripMenuItem.Click += new System.EventHandler(this.hastaToolStripMenuItem_Click);
             // 
             // sekreterToolStripMenuItem
             // 
+            this.sekreterToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.sekreterToolStripMenuItem.Name = "sekreterToolStripMenuItem";
-            this.sekreterToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
+            this.sekreterToolStripMenuItem.Size = new System.Drawing.Size(90, 26);
             this.sekreterToolStripMenuItem.Text = "Sekreter";
             this.sekreterToolStripMenuItem.Click += new System.EventHandler(this.sekreterToolStripMenuItem_Click);
             // 
             // button2
             // 
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.Location = new System.Drawing.Point(649, 436);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(158, 41);
