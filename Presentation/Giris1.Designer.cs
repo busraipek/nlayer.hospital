@@ -175,6 +175,7 @@ namespace Presentation
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Name = "Giris1";
+            this.Load += new System.EventHandler(this.Giris1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

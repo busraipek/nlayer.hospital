@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace Presentation
 {
@@ -37,22 +38,58 @@ namespace Presentation
 
                 if (sayı == 1)
                 {
-                    Doktor doktor = new Doktor(kimlikno);
-                    doktor.Show();
+                    for (int i = 20; i <= 100; i+=20)
+                    {
+                        
+                        progressBar2.Value = i;
+                        Thread.Sleep(350); 
+                    }
+                    if (progressBar2.Value == 100)
+                    {
+                     Doktor doktor = new Doktor(kimlikno);
+                     doktor.Show();
+                     progressBar2.Value = 0;
+                     }
                 }
+                
                 else if (sayı == 2)
                 {
-                    Sekreter1 sekreter = new Sekreter1();
-                    sekreter.Show();
+                    for (int i = 20; i <= 100; i += 20)
+                    {
+
+                        progressBar2.Value = i;
+                        Thread.Sleep(350);
+                    }
+                    if (progressBar2.Value == 100)
+                    {
+                        Sekreter1 sekreter = new Sekreter1();
+                        sekreter.Show();
+                        progressBar2.Value = 0;
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Hatalı kimlik numarası veya şifre. Tekrar deneyin");
-                    textBox1.Clear();
-                    textBox2.Clear();
+                    for (int i = 20; i <= 40; i += 20)
+                    {
+
+                        progressBar2.Value = i;
+                        Thread.Sleep(100);
+                    }
+                    if (progressBar2.Value == 40)
+                    {
+                        MessageBox.Show("Hatalı kimlik numarası veya şifre. Tekrar deneyin");
+                        textBox1.Clear();
+                        textBox2.Clear();
+                        progressBar2.Value = 0;
+                    }
+                    return;
                 }
                 this.Hide();
             }
+        }
+        private void Giris1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

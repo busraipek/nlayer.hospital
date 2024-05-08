@@ -92,16 +92,23 @@ namespace Presentation
                 DateTime saat = DateTime.Parse(label7.Text);
 
                 randevu.RandevuOlustur(textBox1.Text,label10.Text,saat, tarih);
-                //combobox hatalı doktorun kimliğini çek
-                MessageBox.Show("Eklendi");
-                checkedlistlistele();
-                label7.Text = "Randevu Saati";
-                KontrolEt();
+                if (label11.Text== "")
+                {
+                    MessageBox.Show("Lütfen gerçek bir kişi giriniz");
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Eklendi");
+                    checkedlistlistele();
+                    label7.Text = "Randevu Saati";
+                }
+
 
             }
             catch
             {
-                MessageBox.Show("ab");
+                MessageBox.Show("Saat seçiniz");
             }
 
         }

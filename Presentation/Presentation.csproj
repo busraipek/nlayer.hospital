@@ -139,12 +139,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AnaGiriş.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AnaGiriş.Designer.cs">
-      <DependentUpon>AnaGiriş.cs</DependentUpon>
-    </Compile>
     <Compile Include="Bölüm_DoktorSayısı.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,9 +195,6 @@
     <Compile Include="SilmeGuncelleme.Designer.cs">
       <DependentUpon>SilmeGuncelleme.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AnaGiriş.resx">
-      <DependentUpon>AnaGiriş.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Bölüm_DoktorSayısı.resx">
       <DependentUpon>Bölüm_DoktorSayısı.cs</DependentUpon>
     </EmbeddedResource>

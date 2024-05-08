@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "..\DataAccess
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "..\Business\Business.csproj", "{320A65D4-B6DE-4629-AD4D-CA4904C96999}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "..\Setup1\Setup1.vdproj", "{2E16F08A-A1A9-4A65-B078-0BDBF4148CD9}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Hastane Uygulaması", "..\Hastane Uygulaması\Hastane Uygulaması.vdproj", "{B10E1102-1CFF-4F3B-B6A9-3D413EDF2809}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,8 +29,8 @@ Global
 		{320A65D4-B6DE-4629-AD4D-CA4904C96999}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{320A65D4-B6DE-4629-AD4D-CA4904C96999}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{320A65D4-B6DE-4629-AD4D-CA4904C96999}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2E16F08A-A1A9-4A65-B078-0BDBF4148CD9}.Debug|Any CPU.ActiveCfg = Debug
-		{2E16F08A-A1A9-4A65-B078-0BDBF4148CD9}.Release|Any CPU.ActiveCfg = Release
+		{B10E1102-1CFF-4F3B-B6A9-3D413EDF2809}.Debug|Any CPU.ActiveCfg = Debug
+		{B10E1102-1CFF-4F3B-B6A9-3D413EDF2809}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

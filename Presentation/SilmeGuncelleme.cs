@@ -24,6 +24,7 @@ namespace Presentation
 
         private void SilmeGuncelleme_Load(object sender, EventArgs e)
         {
+            button2.Visible= false;
             if (menuno == 0)
             {
                 dataGridView1.DataSource = dataGrid.filldatagriddoktor();
@@ -116,6 +117,7 @@ namespace Presentation
                 guncel.HastaGuncelle(eskikimlik,kimlikno, ad, soyad, cinsiyet, dogum_tarihi, mail, telefon);
                 MessageBox.Show("Başarıyla Güncellendi");
 
+
             }
             else if (menuno == 2)
             {
@@ -127,12 +129,19 @@ namespace Presentation
                 string sifre = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
                 guncel.SekreterGuncelle(eskikimlik,kimlikno, ad, soyad, cinsiyet, dogum_tarihi, sifre);
                 MessageBox.Show("Başarıyla Güncellendi");
+
             }
+            button2.Visible = false;
         }
 
         private void dataGridView1_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
             eskikimlik = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+        }
+
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            button2.Visible = true;
         }
     }
 }

@@ -230,11 +230,12 @@ namespace Presentation
             // 
             this.checkedListBox1.ColumnWidth = 20;
             this.checkedListBox1.Enabled = false;
+            this.checkedListBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Location = new System.Drawing.Point(47, 200);
             this.checkedListBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(117, 157);
+            this.checkedListBox1.Size = new System.Drawing.Size(117, 158);
             this.checkedListBox1.TabIndex = 37;
             this.checkedListBox1.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBox1_ItemCheck);
             // 

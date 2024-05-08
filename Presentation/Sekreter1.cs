@@ -101,6 +101,11 @@ namespace Presentation
         {
             SilmeGuncelleme silme = new SilmeGuncelleme();
             silme.StartPosition = FormStartPosition.CenterScreen;
+            silme.TopLevel = false;
+            silme.FormBorderStyle = FormBorderStyle.None;
+            silme.ControlBox = false;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(silme);
             silme.Show();
         }
         private void doktorHastaSayısıToolStripMenuItem_Click(object sender, EventArgs e)
@@ -171,9 +176,11 @@ namespace Presentation
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-
+            Giris1 giriş = new Giris1();
+            giriş.Show();
+            this.Hide();
         }
     }
 }

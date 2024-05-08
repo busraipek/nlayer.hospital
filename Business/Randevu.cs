@@ -62,21 +62,20 @@ namespace Business
             }
             
         }
-        public void RandevuKaydet(string kimlikno,string tanı,string gorus,string tahlil,string doktor_kimlik)
+        public void RandevuKaydet(string kimlikno,string tanı,string gorus,string tahlil,string brans)
         {
             OleDbConnection connection = baglanti.BaglantiAc();
 
             try
             {
                 OleDbCommand komut = new OleDbCommand("insert into HastaGecmisi" +
-                "(kimlikno,tanı,gorus,tahlil,doktor_kimlik) values (@kimlikno,@tanı,@gorus,@tahlil,@doktor_kimlik)", connection);
+                "(kimlikno,tanı,gorus,tahlil,brans) values (@kimlikno,@tanı,@gorus,@tahlil,@brans)", connection);
 
                 komut.Parameters.AddWithValue("@kimlikno", kimlikno);
                 komut.Parameters.AddWithValue("@tanı", tanı);
                 komut.Parameters.AddWithValue("@gorus", gorus);
                 komut.Parameters.AddWithValue("@tahlil", tahlil);
-                komut.Parameters.AddWithValue("@doktor_kimlik", doktor_kimlik);
-
+                komut.Parameters.AddWithValue("@brans", brans);
                 komut.ExecuteNonQuery();
 
             }

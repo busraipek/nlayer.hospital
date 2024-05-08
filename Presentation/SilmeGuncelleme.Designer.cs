@@ -57,11 +57,12 @@ namespace Presentation
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridView1_CellBeginEdit);
             this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(489, 436);
+            this.button1.Location = new System.Drawing.Point(490, 436);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(158, 41);
             this.button1.TabIndex = 3;
@@ -109,11 +110,11 @@ namespace Presentation
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(649, 436);
+            this.button2.Location = new System.Drawing.Point(650, 436);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(158, 41);
             this.button2.TabIndex = 8;
-            this.button2.Text = "Değişiklikleri Kaydet";
+            this.button2.Text = "Kaydet";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 

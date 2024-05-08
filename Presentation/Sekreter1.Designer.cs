@@ -84,7 +84,6 @@ namespace Presentation
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -146,6 +145,7 @@ namespace Presentation
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(143, 22);
             this.dateTimePicker2.TabIndex = 19;
+            this.dateTimePicker2.Value = new System.DateTime(1990, 4, 5, 0, 0, 0, 0);
             // 
             // label21
             // 
@@ -284,6 +284,7 @@ namespace Presentation
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(141, 25);
             this.dateTimePicker3.TabIndex = 23;
+            this.dateTimePicker3.Value = new System.DateTime(2000, 5, 3, 0, 0, 0, 0);
             // 
             // textBox15
             // 
@@ -456,6 +457,7 @@ namespace Presentation
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(143, 25);
             this.dateTimePicker1.TabIndex = 17;
+            this.dateTimePicker1.Value = new System.DateTime(1980, 5, 7, 15, 13, 0, 0);
             // 
             // label20
             // 
@@ -575,7 +577,7 @@ namespace Presentation
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(42, 78);
+            this.label1.Location = new System.Drawing.Point(34, 78);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 17);
             this.label1.TabIndex = 6;
@@ -589,10 +591,10 @@ namespace Presentation
             "Doktor",
             "Hasta",
             "Sekreter"});
-            this.comboBox1.Location = new System.Drawing.Point(159, 75);
+            this.comboBox1.Location = new System.Drawing.Point(160, 75);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(144, 24);
+            this.comboBox1.Size = new System.Drawing.Size(143, 24);
             this.comboBox1.TabIndex = 5;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -607,7 +609,7 @@ namespace Presentation
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1149, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1228, 30);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -646,10 +648,10 @@ namespace Presentation
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(51, 487);
+            this.button1.Location = new System.Drawing.Point(37, 487);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 36);
+            this.button1.Size = new System.Drawing.Size(286, 38);
             this.button1.TabIndex = 10;
             this.button1.Text = "Ekle";
             this.button1.UseVisualStyleBackColor = true;
@@ -660,7 +662,7 @@ namespace Presentation
             this.panel1.Location = new System.Drawing.Point(330, 75);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(797, 448);
+            this.panel1.Size = new System.Drawing.Size(885, 511);
             this.panel1.TabIndex = 11;
             // 
             // label13
@@ -669,23 +671,11 @@ namespace Presentation
             this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label13.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label13.Location = new System.Drawing.Point(665, 44);
+            this.label13.Location = new System.Drawing.Point(648, 44);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(131, 27);
             this.label13.TabIndex = 26;
             this.label13.Text = "Grafik Alanı";
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(199, 487);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 36);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "Girişe Dön";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -700,23 +690,23 @@ namespace Presentation
             this.button3.TabIndex = 28;
             this.button3.Text = "<<";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Sekreter1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1149, 549);
+            this.ClientSize = new System.Drawing.Size(1228, 599);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Sekreter1";
             this.Text = "Sekreter1";
@@ -791,7 +781,6 @@ namespace Presentation
         private System.Windows.Forms.ToolStripMenuItem bölümHastaSayısıToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
     }
 }

@@ -26,18 +26,18 @@ namespace Presentation
         }
         public void DisplayGraph()
         {
-            //GraphPane myPane = zedGraphControl1.GraphPane;
-            //PointPairList list = zedgraphbr.LoadGraphData();
-            //BarItem myBar = myPane.AddBar("Hasta Sayısı", list, System.Drawing.Color.Black);
-            //myBar.Bar.Fill = new Fill(System.Drawing.Color.Blue);
-            //myBar.Label.IsVisible = true;
-            //myPane.XAxis.Type = AxisType.Text;
-            //myPane.XAxis.Scale.TextLabels = list.Select(p => p.Tag.ToString()).ToArray();
+            GraphPane myPane = zedGraphControl1.GraphPane;
+            PointPairList list = zedgraphbr.LoadGraphData();
+            BarItem myBar = myPane.AddBar("Hasta Sayısı", list, System.Drawing.Color.Black);
+            myBar.Bar.Fill = new Fill(System.Drawing.Color.Blue);
+            myBar.Label.IsVisible = true;
+            myPane.XAxis.Type = AxisType.Text;
+            myPane.XAxis.Scale.TextLabels = list.Select(p => p.Tag.ToString()).ToArray();
 
-            //myPane.XAxis.Title.Text = "Branşlar";
-            //myPane.YAxis.Title.Text = "Hasta Sayısı";
+            myPane.XAxis.Title.Text = "Branşlar";
+            myPane.YAxis.Title.Text = "Hasta Sayısı";
 
-            //zedGraphControl1.AxisChange();
+            zedGraphControl1.AxisChange();
         }
     }
 }

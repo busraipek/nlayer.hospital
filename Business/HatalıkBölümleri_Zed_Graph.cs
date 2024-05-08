@@ -10,37 +10,38 @@ using System.Collections;
 
 namespace Business
 {
-   public  class HatalıkBölümleri_Zed_Graph
+    public class HatalıkBölümleri_Zed_Graph
     {
         private DataAccess.Baglanti baglanti = new DataAccess.Baglanti();
 
-        //public PointPairList LoadGraphData()
-        //{
-            //OleDbConnection connection = baglanti.BaglantiAc();
-            //PointPairList list = new PointPairList();
+        public PointPairList LoadGraphData()
+        {
+            OleDbConnection connection = baglanti.BaglantiAc();
+            PointPairList list = new PointPairList();
 
-            //string query = "SELECT hg.doktor_kimlik,COUNT(h.kimlikno) AS hastaSayisi FROM HastaGecmisi hg LEFT JOIN Hasta h ON hg.kimlikno = h.kimlikno GROUP BY hg.doktor_kimlik;";
-            //;
+            string query = "SELECT d.brans AS brans,COUNT(r.HastaKimlik) AS hastaSayisi FROM Doktor d LEFT JOIN Randevu r ON d.kimlikno = r.DoktorKimlik GROUP BY d.brans";
+            
+            using (OleDbCommand command = new OleDbCommand(query, connection))
+            {
+                using (OleDbDataReader reader = command.ExecuteReader())
+                {
+                    int indis = 1;
 
-            //using (OleDbCommand command = new OleDbCommand(query, connection))
-            //{
-            //    using (OleDbDataReader reader = command.ExecuteReader())
-            //    {
-            //        int indis = 1;
+                    while (reader.Read())
+                    {
+                        string brans = reader["brans"].ToString();
+                        int hastaSayisi = Convert.ToInt32(reader["hastaSayisi"]);
 
-            //        while (reader.Read())
-            //        {
-            //            string doktor_kimlik = reader["doktor_kimlik"].ToString();
-            //            int hastaSayisi = Convert.ToInt32(reader["hastaSayisi"]);
+                        list.Add(indis, hastaSayisi, brans);
+                        indis++;
+                    }
+                }
 
-            //            list.Add(indis, hastaSayisi, doktor_kimlik);
-            //            indis++;
-            //        }
-            //    }
-            //}
 
-            //return list;
-     
+                return list;
+
+            }
+        }
     }
 }
 
